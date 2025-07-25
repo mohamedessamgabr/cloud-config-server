@@ -10,9 +10,11 @@ eureka:
 microservice:
   payment-service:
     endpoints:
-      endpoint:
+      getByOrderId:
+        uri: http://payment-service/payments/{orderId}
+      create:
         uri: http://payment-service/payments
   order-service:
     endpoints:
-      endpoint:
+      create:
         uri: http://order-service/orders
